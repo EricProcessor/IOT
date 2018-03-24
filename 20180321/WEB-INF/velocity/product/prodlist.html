@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>产品列表</title>
+  <link rel="stylesheet" href="../../../statics/pages/common/css/normalize.css">
+  <link rel="stylesheet" href="../../../statics/pages/common/css/common.css">
+  <link href="../../../statics/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../statics/pages/product/css/prodlist.css">
+  <!--[if lt IE 9]>
+  <script src="../../../statics/pages/common/js/html5shiv.min.js"></script>
+  <script src="../../../statics/pages/common/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+    <header class="top-nav">
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 left-menu">
+                <!-- 左侧导航  -->
+            </div>
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-2 col-md-offset-10 mbt1 padr1">
+                        <button type="button" data-target="addpro.html" onclick="addPro(this)" class="btn btn-success">添加</button>
+                    </div>
+                </div>
+                <!-- 产品列表 -->
+                 <div class="row bg1">
+                     <div class="col-md-3 mtplist2">
+                         <img src="../../../statics/pages/product/images/test.jpg" alt="" class="img-responsive">
+                     </div>
+                     <div class="col-md-6 mtplist1">
+                         <p>产品ID:<span>20180898</span></p>
+                         <p>产品名称:<span>海康网络摄像头</span></p>
+                         <p>产品型号:<span>一款捕捉货架实时理货影像的摄像头</span></p>
+                         <p>在线/总数:<input type="text" name="" value="90/100" readonly="readonly"></p>
+                     </div>
+                     <div class="col-md-3 mtplist3">
+                         <button type="button" class="btn btn-info" onclick="editPro()">编辑</button>
+                         <button type="button" class="btn btn-danger">删除</button>
+                     </div>
+                 </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../../statics/pages/common/js/jquery-1.11.3.js"></script>
+    <script src="../../../statics/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../statics/pages/common/js/common.js"></script>`
+    <script>
+        function editPro(){
+            window.location.href="./basicinfo.html";
+        }
+    </script>
+</body>
+</html>

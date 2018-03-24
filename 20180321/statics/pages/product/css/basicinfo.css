@@ -1,0 +1,101 @@
+.bgadd{
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+.bgwit{
+    background-color: #fff;
+    padding: 10px;
+}
+.padlt20{
+    padding-left: 20px;
+}
+.padlt20 input,select{
+    width: 400px;
+    height: 26px;
+}
+.padlt16{
+    padding-left: 16px;
+}
+.contxt{
+    background-color: #fff;
+    padding: 20px;
+}
+
+.tip-txt{
+    display: inline-block;
+    line-height: 40px;
+    width: 150px;
+    text-align: center;
+    color: #fff;
+    background: url("../images/bg2.png") no-repeat;
+    cursor: pointer;
+}
+.bgact{
+    background: url("../images/bg1.png") no-repeat;
+}
+.ptp10{
+    padding-top: 10px;
+}
+.proname{
+    display: inline-block;
+    width: 70px;
+}
+.mtp10{
+    margin-top: 10px;
+}
+.preview{
+    width: 200px;
+    height:200px;
+    border: 1px solid #666;
+}
+#preview{
+    width: 200px;
+}
+.mtbp{
+    margin: 20px 0;
+}
+/* form表单样式 */
+.form-w{
+    width: 300px;
+    padding-bottom: 10px;
+}
+/* .input-w{
+
+} */
+#newPop{
+    margin-left:40px;
+    margin-top: 20px; 
+}
+#selite1{
+    width: 179px;
+    margin-left: 28px;
+}
+#selite2{
+    width: 179px;
+}
+#iptmax{
+    margin-left: 13px;
+}
+#iptmin{
+    margin-left: 13px;
+}
+#txtbox{
+    width: 482px;
+}
+.btn-groups{
+    text-align: center;
+    padding: 10px 0;
+}
+.bggary{
+    background-color: #ccc;
+    padding: 10px 0;
+}
+#tbl1-tbody td{
+    width: 240px;
+}
+.iptW{
+    width: 40px;
+}
+.mgrt{
+    margin-right: 20px;
+}

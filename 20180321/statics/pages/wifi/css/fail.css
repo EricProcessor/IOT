@@ -1,0 +1,9 @@
+p {
+    position: absolute;
+    width: 50%;
+    margin-left: 25%;
+    font-size: 1.5rem;
+    color: darkgrey;
+    bottom: 2%;
+    text-align: center;
+}

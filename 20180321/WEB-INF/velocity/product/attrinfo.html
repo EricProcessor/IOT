@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>产品属性信息</title>
+  <link rel="stylesheet" href="../../../statics/pages/common/css/normalize.css">
+  <link rel="stylesheet" href="../../../statics/pages/common/css/common.css">
+  <link href="../../../statics/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../statics/pages/product/css/basicinfo.css">
+  <!--[if lt IE 9]>
+   <script src="../../../statics/pages/common/js/html5shiv.min.js"></script>
+  <script src="../../../statics/pages/common/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+    <header class="top-nav">
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 left-menu">
+                <!-- 左侧导航 -->
+            </div>
+            <div class="col-md-10 bgadd">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="tip-txt" data-target="basicinfo.html" onclick="toogleInfo(this)">基本信息</span>
+                        <span class="tip-txt bgact" data-target="attrinfo.html" onclick="toogleInfo(this)">属性信息</span>
+                        <span class="tip-txt" data-target="funcinfo.html" onclick="toogleInfo(this)">功能信息</span>
+                        <span class="tip-txt" data-target="">OTA</span>
+                        <span class="tip-txt" data-target="ruleset.html" onclick="toogleInfo(this)">规则设置</span>
+                    </div>
+                </div>
+                <div class="row bgwit mtp10">
+                    <div class="col-md-12 mbt10">
+                        <button type="button" class="btn btn-primary" id="newAttr">新建属性</button>
+                    </div>
+                    <div class="col-md-12 table-responsive">
+                        <table class="table table-bordered table-condensed">
+                            <thead>
+                                <tr>
+                                    <th>属性标识</th>
+                                    <th>属性名称</th>
+                                    <th>读写类型</th>
+                                    <th>数据类型</th>
+                                    <th>参数单位</th>
+                                    <th>数据操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>SXT_power</td>
+                                    <td>电源开关</td>
+                                    <td>可写</td>
+                                    <td>整型</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info" onclick="editInfo(this)">编辑</button>
+                                        <button type="button" class="btn btn-danger" onclick="delInfo(this)">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>SXT_power</td>
+                                    <td>电源开关</td>
+                                    <td>可写</td>
+                                    <td>整型</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info" onclick="editInfo(this)">编辑</button>
+                                        <button type="button" class="btn btn-danger" onclick="delInfo(this)">删除</button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>SXT_power</td>
+                                    <td>电源开关</td>
+                                    <td>可写</td>
+                                    <td>整型</td>
+                                    <td>-</td>
+                                    <td>
+                                        <button type="button" class="btn btn-info" onclick="editInfo(this)">编辑</button>
+                                        <button type="button" class="btn btn-danger" onclick="delInfo(this)">删除</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div id="newPop" style="display:none">
+        <form class="form-inline">
+            <div class="form-group form-w">
+                <label for="iptattr">标识属性:</label>
+                <input type="text" class="form-control" id="iptattr" placeholder="字母命名">
+            </div>
+            <div class="form-group form-w">
+                <label for="iptname">属性名称:</label>
+                <input type="text" class="form-control" id="iptname" placeholder="温度、距离">
+            </div>
+            <div class="form-group form-w">
+                <label for="selite">类型:</label>
+                <select class="form-control" id="selite1">
+                    <option>bool</option>
+                    <option>int</option>
+                    <option>string</option>
+                </select>
+            </div>
+            <div class="form-group form-w">
+                <label for="selite">读写属性:</label>
+                <select class="form-control" id="selite2">
+                    <option>读</option>
+                    <option>写</option>
+                    <option>读/写</option>
+                </select>
+            </div>
+            <div class="form-group form-w">
+                <label for="iptmax">最大值:</label>
+                <input type="text" class="form-control" id="iptmax" placeholder="0.01">
+            </div>
+            <div class="form-group form-w">
+                <label for="iptmax">最小值:</label>
+                <input type="text" class="form-control" id="iptmin" placeholder="1.00">
+            </div>
+            <div class="form-group form-w">
+                <label for="iptcom">单位名称:</label>
+                <input type="text" class="form-control" id="iptcom" placeholder="0.01">
+            </div>
+            <div class="form-group form-w">
+                <label for="ipticon">单位符号:</label>
+                <input type="text" class="form-control" id="ipticon" placeholder="0.01">
+            </div>
+            <div class="form-group">
+                <label for="ipticon">属性描述:</label>
+                <textarea class="form-control" rows="3" id="txtbox"></textarea>
+            </div>
+            <div class="btn-groups">
+                <button type="submit" class="btn btn-info">提交</button>
+                <button type="submit" class="btn btn-danger">重置</button>
+            </div>
+            <!-- <button type="submit" class="btn btn-default">Send invitation</button> -->
+        </form>
+        <div class="pop-tle">
+            <button type="button" class="btn btn-primary" id="create2">新建</button>
+        </div>
+        <table class="table table-bordered table-condensed">
+            <thead>
+                <tr>
+                    <th>键名</th>
+                    <th>键值</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody id="tbl1-tbody">
+                <tr>
+                    <td>a</td>
+                    <td>100</td>
+                    <td>
+                        <button type="button" class="btn btn-info">编辑</button>
+                        <button type="button" class="btn btn-danger">删除</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../../../statics/pages/common/js/jquery-1.11.3.js"></script>
+    <script src="../../../statics/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../statics/pages/common/js/common.js"></script>
+    <script src="../../../statics/pages/product/js/basicinfo.js"></script>
+    <script src="../../../statics/layer/layer.js"></script>
+    <script>
+    $(document).ready(function(){ 
+        //弹出一个页面层
+        $('#newAttr').on('click', function(){    
+            layer.open({
+            type: 1,
+            title:" 添加属性数据",
+            area: ['700px', '400px'],
+            shadeClose: true, //点击遮罩关闭
+            content: $('#newPop')
+            });
+        });
+        // 新建
+        $("#create2").on('click',function(){
+            $("#tbl1-tbody").append("<tr>"+
+                                        "<td><input type='text'></td>"+
+                                        "<td><input type='text'></td>"+
+                                        "<td>"+
+                                            "<button type='button' class='btn btn-info' onclick='csave(this)'>保存</button>"+
+                                            "<button type='button' class='btn btn-danger' onclick='ccan(this)'>取消</button>"+
+                                        "</td>"+
+                                    "</tr>"
+                )
+        });
+    });
+    function csave(msg){
+        // 获取按钮内容
+        var btntxt = $(msg).html();
+        if(btntxt == "保存"){
+            // 取得输入框内容,不符合规则过滤
+            var txt = $(msg).parent("td").siblings("td").find("input");
+            var txt1=$(txt[0]).val();
+            var txt2=$(txt[1]).val();
+            var validtxt1;
+            var validtxt2;
+            if(txt1==""){
+                validtxt1=false;
+            }else{
+                validtxt1=true;
+            }
+            if(txt2==""){
+                validtxt2=false;
+            }else{
+                validtxt2=true;
+            }
+            console.log(validtxt1,validtxt2);
+            if((validtxt1&&validtxt2)){
+                // 验证通过
+                $(msg).html("编辑");
+                $(msg).siblings("button").html("删除");
+                $(msg).parent("td").siblings("td").find("input").remove();
+                var tdele = $(msg).parent("td").siblings("td");
+                $(tdele[0]).html(txt1);
+                $(tdele[1]).html(txt2);
+            }else{
+                // 验证失败
+                layer.msg('请正确输入');
+            }
+        }else{
+            // 点击编辑按钮
+            $(msg).html("保存");
+            $(msg).siblings("button").html("取消");
+            var tdtxt = $(msg).parent("td").siblings("td");
+            var tdtxt1 = $(tdtxt[0]).text();
+            var tdtxt2 = $(tdtxt[1]).text();
+            $(tdtxt[0]).html("");
+            $(tdtxt[1]).html("");
+            $(tdtxt[0]).append("<input type='text' value="+tdtxt1+">");
+            $(tdtxt[1]).append("<input type='text'value="+tdtxt2+">");
+        }
+    }
+    function ccan(msg){
+        var btntxt = $(msg).html();
+        if(btntxt=="取消"){
+            $(msg).parents("tr").remove();
+        }else if(btntxt == "删除"){
+            console.log("删除操作")
+        }
+    }
+    // 数据操作编辑按钮
+    function editInfo(msg){
+        layer.open({
+            type: 1,
+            title:" 编辑属性数据",
+            area: ['700px', '400px'],
+            shadeClose: true, //点击遮罩关闭
+            content: $('#newPop')
+        });
+    }
+    function delInfo(msg){
+        $(msg).parents("tr").remove();
+        alert("删除成功");
+    }
+    </script>
+</body>
+</html>

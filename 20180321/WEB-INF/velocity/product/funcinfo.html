@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>功能信息</title>
+  <link rel="stylesheet" href="../../../statics/pages/common/css/normalize.css">
+  <link rel="stylesheet" href="../../../statics/pages/common/css/common.css">
+  <link href="../../../statics/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../statics/pages/product/css/basicinfo.css">
+  <!--[if lt IE 9]>
+  <script src="../../../statics/pages/common/js/html5shiv.min.js"></script>
+  <script src="../../../statics/pages/common/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+    <header class="top-nav">
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 left-menu">
+                <!-- 左侧导航 -->
+            </div>
+            <div class="col-md-10 bgadd">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="tip-txt" data-target="basicinfo.html" onclick="toogleInfo(this)">基本信息</span>
+                        <span class="tip-txt" data-target="attrinfo.html" onclick="toogleInfo(this)">属性信息</span>
+                        <span class="tip-txt bgact" data-target="funcinfo.html" onclick="toogleInfo(this)">功能信息</span>
+                        <span class="tip-txt" data-target="" onclick="toogleInfo()">OTA</span>
+                        <span class="tip-txt" data-target="ruleset.html" onclick="toogleInfo(this)">规则设置</span>
+                    </div>
+                </div>
+                <div class="row bgwit mtp10">
+                    <div class="col-md-12 mbt10">
+                        <button type="button" class="btn btn-primary" id="addIns">添加指令</button>
+                    </div>
+                </div>  
+                <div class="row bgwit ">
+                    <div class="col-md-12">
+                        <div class="row border-gray">
+                            <div class="col-md-2">
+                                <h4>暂停</h4>
+                            </div>
+                            <div class="col-md-2 col-md-offset-8">
+                                <button type="button" class="btn btn-info">编辑</button>
+                                <button type="button" class="btn btn-danger">删除</button>
+                            </div>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>数据属性 标识</th>
+                                        <th>数据属性 名称</th>
+                                        <th>是否必须</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>SXT_pause</td>
+                                        <td>暂停</td>
+                                        <td>否</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SXT_pause</td>
+                                        <td>暂停</td>
+                                        <td>否</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row border-gray">
+                            <div class="col-md-2">
+                                <h4>暂停</h4>
+                            </div>
+                            <div class="col-md-2 col-md-offset-8">
+                                <button type="button" class="btn btn-info">编辑</button>
+                                <button type="button" class="btn btn-danger">删除</button>
+                            </div>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>数据属性 标识</th>
+                                        <th>数据属性 名称</th>
+                                        <th>是否必须</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>SXT_pause</td>
+                                        <td>暂停</td>
+                                        <td>否</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SXT_pause</td>
+                                        <td>暂停</td>
+                                        <td>否</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row border-gray">
+                            <div class="col-md-2">
+                                <h4>暂停</h4>
+                            </div>
+                            <div class="col-md-2 col-md-offset-8">
+                                <button type="button" class="btn btn-info">编辑</button>
+                                <button type="button" class="btn btn-danger">删除</button>
+                            </div>
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>数据属性 标识</th>
+                                        <th>数据属性 名称</th>
+                                        <th>是否必须</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>SXT_pause</td>
+                                        <td>暂停</td>
+                                        <td>否</td>
+                                    </tr>
+                                    <tr>
+                                        <td>SXT_pause</td>
+                                        <td>暂停</td>
+                                        <td>否</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div id="addInsPop" style="display:none;">
+        <form class="form-horizontal">
+            <div class="form-group form-w1">
+                <label for="introName" class="col-sm-2 control-label">指令名称:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="introName" placeholder="必填">
+                </div>
+            </div>
+            <div class="form-group form-w1">
+                <label for="radioStatus" class="col-sm-2 control-label">指令类别:</label>
+                <label class="radio-inline">
+                    <input type="radio" id="radioStatus" value="">指令状态
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" id="radio" value="">命令
+                </label>
+            </div>
+            <div class="form-group form-w1">
+                <label for="introName" class="col-sm-2 control-label">指令描述:</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" rows="5" id="txtbox"></textarea>
+                </div>
+            </div>
+            <div class="form-group form-w1">
+                <label for="selPara" class="col-sm-2 control-label">参数:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="selPara" placeholder="选择参数">
+                </div>
+            </div>
+            <div class="form-group form-w1">
+                <div class="col-sm-10">
+                    <table class="table table-bordered maglt100">
+                        <thead>
+                            <tr>
+                                <th>参数标识</th>
+                                <th>参数名称</th>
+                                <th>必须</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>sxt_on</td>
+                                <td>开机状态</td>
+                                <td>
+                                    <input type="checkbox" value="">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>sxt_on</td>
+                                <td>开机状态</td>
+                                <td>
+                                    <input type="checkbox" value="">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="form-group form-w1">
+                <label for="selPara" class="col-sm-2 control-label">元数据:</label>
+                <div class="col-sm-10 mbt10">
+                    <button type="button" class="btn btn-primary">添加</button>
+                </div>
+                <div class="col-sm-10">
+                    <table class="table table-bordered maglt100">
+                        <thead>
+                            <tr>
+                                <th>键名</th>
+                                <th>键值</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>a</td>
+                                <td>100</td>
+                                <td>
+                                    <button type="button" class="btn btn-info">编辑</button>
+                                    <button type="button" class="btn btn-danger">删除</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>b</td>
+                                <td>200</td>
+                                <td>
+                                    <button type="button" class="btn btn-info">编辑</button>
+                                    <button type="button" class="btn btn-danger">删除</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="../../../statics/pages/common/js/jquery-1.11.3.js"></script>
+    <script src="../../../statics/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../statics/pages/common/js/common.js"></script>
+    <script src="../../../statics/pages/product/js/basicinfo.js"></script>
+    <script src="../../../statics/layer/layer.js"></script>
+    <script>
+    $(document).ready(function(){ 
+        //弹出一个页面层
+        $('#addIns').on('click', function(){    
+            layer.open({
+            type: 1,
+            title:" 添加属性数据",
+            area: ['700px', '500px'],
+            shadeClose: true, //点击遮罩关闭
+            content: $('#addInsPop')
+            });
+        });
+    });
+    </script>
+</body>
+</html>

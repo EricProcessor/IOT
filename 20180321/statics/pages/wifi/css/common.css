@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/bg023.png");
+    background-size: 100% 100%;
+    z-index: 1;
+}
+
+.grid {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 40%;
+    background-image: url("../img/Popup3.png");
+    background-size: 100% 100%;
+    margin-top: 20%;
+}
+
+.tip {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}

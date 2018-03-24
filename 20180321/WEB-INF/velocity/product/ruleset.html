@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>功能信息</title>
+  <link rel="stylesheet" href="../../../statics/pages/common/css/normalize.css">
+  <link rel="stylesheet" href="../../../statics/pages/common/css/common.css">
+  <link href="../../../statics/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../statics/pages/product/css/basicinfo.css">
+  <!--[if lt IE 9]>
+  <script src="../../../statics/pages/common/js/html5shiv.min.js"></script>
+  <script src="../../../statics/pages/common/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+    <header class="top-nav">
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 left-menu">
+                <!-- 左侧导航 -->
+            </div>
+            <div class="col-md-10 bgadd">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="tip-txt" data-target="basicinfo.html" onclick="toogleInfo(this)">基本信息</span>
+                        <span class="tip-txt" data-target="attrinfo.html" onclick="toogleInfo(this)">属性信息</span>
+                        <span class="tip-txt" data-target="funcinfo.html" onclick="toogleInfo(this)">功能信息</span>
+                        <span class="tip-txt" data-target="" onclick="toogleInfo()">OTA</span>
+                        <span class="tip-txt bgact" data-target="ruleset.html" onclick="toogleInfo(this)">规则设置</span>
+                    </div>
+                </div>
+                <div class="row bgwit mtp10">
+                    <div class="col-md-12">
+                        <h3>报警设置</h3>
+                    </div>
+                    <div class="col-md-12 mtp10">
+                        <span>是否发送报警:</span>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" value="y">是
+                        </label>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" value="n">否
+                        </label>
+                    </div>
+                    <div class="col-md-12 mtp10">
+                        <span>报警规则:</span>
+                        <span>检测频率</span><input type="text" class="iptW"><span class="mgrt">秒</span>
+                        <span>连续出现超时</span><input type="text" class="iptW"><span>次,则进行报警。</span>
+                    </div>
+                    <div class="col-md-12 mtp10">
+                        <span>联系人手机号:</span><input type="text">
+                    </div>
+                    <div class="col-md-4 mtp10">
+                        <button class="btn btn-info" onclick="ruleSubmit()">提交</button>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <script src="../../../statics/pages/common/js/jquery-1.11.3.js"></script>
+    <script src="../../../statics/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../statics/pages/common/js/common.js"></script>
+    <script src="../../../statics/pages/product/js/basicinfo.js"></script>
+    <script src="../../../statics/layer/layer.js"></script>
+    <script>
+
+    </script>
+</body>
+</html>

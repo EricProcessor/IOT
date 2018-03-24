@@ -1,0 +1,87 @@
+<div class="panel-group table-responsive" role="tablist">
+        <div class="panel panel-primary leftMenu">
+            <!-- 利用data-target指定要折叠的分组列表 -->
+            <div class="panel-heading" id="collapseListGroupHeading1" data-toggle="collapse" data-target="#collapseListGroup1" role="tab" >
+                <h4 class="panel-title">
+                    首页
+                    <span class="glyphicon glyphicon-chevron-down right"></span>
+                </h4>
+            </div>
+            <!-- .panel-collapse和.collapse标明折叠元素 .in表示要显示出来 -->
+            <div id="collapseListGroup1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading1">
+                <ul class="list-group">
+                    <!-- 利用data-target指定URL -->
+                    <li class="list-group-item">
+                        <button class="menu-item-left">list---1</button>
+                    </li>
+                    <li class="list-group-item">
+                        <button class="menu-item-left">list---2</button>
+                    </li>
+                    <li class="list-group-item">
+                        <button class="menu-item-left">list---3</button>
+                    </li>
+                </ul>
+            </div>
+        </div><!--panel end-->
+        <div class="panel panel-primary leftMenu">
+            <div class="panel-heading" id="collapseListGroupHeading2" data-toggle="collapse" data-target="#collapseListGroup2" role="tab" >
+                <h4 class="panel-title">
+                    产品管理
+                    <span class="glyphicon glyphicon-chevron-up right"></span>
+                </h4>
+            </div>
+            <div id="collapseListGroup2" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading2">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="menu-item-left" data-target="product/prodlist.html" onclick="tooglePage(this)">产品列表</button>
+                    </li>
+                    <li class="list-group-item">
+                        <button class="menu-item-left">产品统计</button>
+                    </li>
+                    <li class="list-group-item">
+                        <button class="menu-item-left">产品OTA</button>
+                    </li>
+                </ul>
+            </div>
+        </div>  
+        <div class="panel panel-primary leftMenu">
+            <div class="panel-heading" id="collapseListGroupHeading3" data-toggle="collapse" data-target="#collapseListGroup3" role="tab" >
+                <h4 class="panel-title">
+                    设备管理
+                    <span class="glyphicon glyphicon-chevron-up right"></span>
+                </h4>
+            </div>
+            <div id="collapseListGroup3" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading3">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="menu-item-left" data-target="device/devlist.html" onclick="tooglePage(this)">设备列表</button>
+                    </li>
+                    <li class="list-group-item">
+                        <button class="menu-item-left">设备统计</button>
+                    </li>
+                </ul>
+            </div>
+        </div>  
+        <div class="panel panel-primary leftMenu">
+            <div class="panel-heading" id="collapseListGroupHeading4" data-toggle="collapse" data-target="#collapseListGroup4" role="tab" >
+                <h4 class="panel-title">
+                    应用管理
+                    <span class="glyphicon glyphicon-chevron-up right"></span>
+                </h4>
+            </div>
+            <div id="collapseListGroup4" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="collapseListGroupHeading4">
+                <ul class="list-group">
+                    <li class="list-group-item">
+                        <button class="menu-item-left">应用列表</button>
+                    </li>
+                </ul>
+            </div>
+        </div>  
+    </div>
+    <script>
+    $(".panel-heading").click(function(e){
+        /*切换折叠指示图标*/
+        $(this).find("span").toggleClass("glyphicon-chevron-down");
+        $(this).find("span").toggleClass("glyphicon-chevron-up");
+    });
+    </script>

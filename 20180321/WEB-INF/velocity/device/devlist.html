@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>设备列表</title>
+  <link rel="stylesheet" href="../../../statics/pages/common/css/normalize.css">
+  <link rel="stylesheet" href="../../../statics/pages/common/css/common.css">
+  <link href="../../../statics/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../statics/pages/device/css/devlist.css">
+  <!--[if lt IE 9]>
+  <script src="../../../statics/pages/common/js/html5shiv.min.js"></script>
+  <script src="../../../statics/pages/common/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+    <header class="top-nav">
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 left-menu">
+                <!-- 左侧导航 -->
+            </div>
+            <div class="col-md-10">
+                <div class="row selbg">
+                    <div class="col-md-7">
+                        <select name="" id="" class="form-control-sel">
+                            <option value="">-产品分类-</option>
+                        </select>
+                        <select name="" id="" class="form-control-sel">
+                            <option value="">-所属产品-</option>
+                        </select>
+                        <select name="" id="" class="form-control-sel">
+                            <option value="">-设备状态-</option>
+                            <option value="">16:9</option>
+                            <option value="">4:3</option>
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-md-offset-3">
+                        <button type="button" class="btn btn-primary">搜索</button>
+                    </div>
+                </div>
+                <div class="row selbg">
+                    <div class="col-md-2 col-md-offset-10">
+                        <button class="btn btn-success" id="addPro">添加</button>
+                    </div>
+                </div>
+                <div class="row selbg">
+                    <div class="col-md-3 imgbox">
+                        <img src="../../../statics/pages/device/images/dev1.jpg" class="devimg img-responsiv">
+                        <p>20180209001/20e55j966t3p</p>
+                        <p>接入日期:20180201 18:00:09</p>
+                        <p>离线</p>
+                    </div>
+                    <div class="col-md-3 imgbox">
+                        <img src="../../../statics/pages/device/images/dev1.jpg" class="devimg img-responsiv">
+                        <p>20180209001/20e55j966t3p</p>
+                        <p>接入日期:20180201 18:00:09</p>
+                        <p>在线</p>
+                    </div>
+                    <div class="col-md-3 imgbox">
+                        <img src="../../../statics/pages/device/images/dev1.jpg" class="devimg img-responsiv">
+                        <p>20180209001/20e55j966t3p</p>
+                        <p>接入日期:20180201 18:00:09</p>
+                        <p>在线</p>
+                    </div>
+                    <div class="col-md-3 imgbox">
+                        <img src="../../../statics/pages/device/images/dev1.jpg" class="devimg img-responsiv">
+                        <p>20180209001/20e55j966t3p</p>
+                        <p>接入日期:20180201 18:00:09</p>
+                        <p>离线</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="addPop" style="display:none;">
+        <div class="row">
+            <div class="col-md-6 mbt10 col-md-offset-1">
+                <span class="proname">产品:</span>
+                <span>
+                    <select name="" id="" class="sel1">
+                        <option value="摄像头">摄像头</option>
+                        <option value="路由">摄像头</option>
+                        <option value="智能货柜">智能货柜</option>
+                    </select>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mbt10 col-md-offset-1">
+                <span class="proname">MAC:</span>
+                <span>
+                    <textarea style="width:200px;height:90px;" name="" id="" cols="30" rows="10"></textarea>
+                </span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mbt10 col-md-offset-3">
+                <button type="button" class="btn btn-info">提交</button>
+                <button type="button" class="btn btn-danger">取消</button>
+            </div>
+        </div>
+    </div>
+    <script src="../../../statics/pages/common/js/jquery-1.11.3.js"></script>
+    <script src="../../../statics/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../statics/pages/common/js/common.js"></script>
+    <script src="../../../statics/layer/layer.js"></script>
+    <script>
+    //弹出一个页面层
+    $('#addPro').on('click', function(){    
+        layer.open({
+        type: 1,
+        title:"添加设备",
+        area: ['600px', '360px'],
+        shadeClose: true, //点击遮罩关闭
+        content: $('#addPop')
+        });
+    });
+    </script>
+    
+</body>
+</html>

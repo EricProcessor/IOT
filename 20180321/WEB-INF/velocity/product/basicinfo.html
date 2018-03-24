@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>产品基本信息</title>
+  <link rel="stylesheet" href="../../../statics/pages/common/css/normalize.css">
+  <link rel="stylesheet" href="../../../statics/pages/common/css/common.css">
+  <link href="../../../statics/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../../../statics/pages/product/css/basicinfo.css">
+  <!--[if lt IE 9]>
+  <script src="../../../statics/pages/common/js/html5shiv.min.js"></script>
+  <script src="../../../statics/pages/common/js/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+    <header class="top-nav">
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2 left-menu">
+                <!-- 左侧导航 -->
+            </div>
+            <div class="col-md-10 bgadd">
+                <div class="row">
+                    <div class="col-md-12">
+                        <span class="tip-txt bgact" data-target="basicinfo.html" onclick="toogleInfo(this)">基本信息</span>
+                        <span class="tip-txt" data-target="attrinfo.html" onclick="toogleInfo(this)">属性信息</span>
+                        <span class="tip-txt" data-target="funcinfo.html" onclick="toogleInfo(this)">功能信息</span>
+                        <span class="tip-txt" >OTA</span>
+                        <span class="tip-txt" data-target="ruleset.html" onclick="toogleInfo(this)">规则设置</span>
+                    </div>
+                </div>
+                <div class="row bgwit mtp10">
+                    <div class="col-md-12">
+                        <h4>基本信息</h4>
+                    </div>
+                    <div class="col-md-12">
+                        <form action="">
+                            <div class="row">
+                                <div class="col-md-12 mbt10">
+                                    <span class="proname">产品ID:</span><span class="padlt20"><input type="text" value="201803131" readonly="readonly"></span>
+                                </div>
+                                <div class="col-md-12 mbt10">
+                                    <span class="proname">产品名称:</span><span class="padlt20"><input type="text"></span>
+                                </div>
+                                <div class="col-md-12 mbt10">
+                                    <span class="proname">产品品牌:</span><span class="padlt20"><input type="text"></span>
+                                </div>
+                                <div class="col-md-12 mbt10">
+                                    <span class="proname">产品型号:</span><span class="padlt20"><input type="text"></span>
+                                </div>
+                                <div class="col-md-12 mbt10">
+                                    <span class="proname">产品类别:</span><span class="padlt16">
+                                        <select name="" id="">
+                                            <option value="0">请选择</option>
+                                            <option value="1">摄像设备</option>
+                                            <option value="2">智能货柜</option>
+                                            <option value="3">智能广告牌</option>
+                                            <option value="4">网关广告牌</option>
+                                        </select>
+                                    </span>
+                                </div>
+                                <div class="col-md-12 bgwit">
+                                    <h4>介绍信息</h4>
+                                </div>
+                                <div class="col-md-12 mbt10">
+                                    <span class="proname">产品描述:</span><span class="padlt20"><input type="text"></span>
+                                </div>        
+                                <div class="col-md-2 mbt10">
+                                    <span class="proname">产品图片:</span>
+                                </div> 
+                                <!-- 预览图片 -->
+                                <div class="col-md-8">
+                                    <div class="preview">
+                                        <!-- 图片回显 -->
+                                        <img id="preview" src="../../../statics/pages/product/images/dev1.jpg"/>
+                                    </div>
+                                    <input class=" mtbp" type="file" name="file" onchange="imgPreview(this)" />
+                                </div>
+                                <div class="col-md-12 bgwit">
+                                    <h4>配置信息</h4>
+                                </div>
+                                <div class="col-md-12 mbt10">
+                                    <span class="proname">设备类型:</span>
+                                    <form action="">
+                                        <input type="radio" name="radio" value="普通设备">普通设备
+                                        <input type="radio" name="radio" value="网关设备">网关设备
+                                        <input type="radio" name="radio" value="网关子设备">网关子设备
+                                    </form>
+                                </div>      
+                                <div class="col-md-12 mbt10">
+                                    <form action="">
+                                        <span class="proname">唯一标识:</span>
+                                        <input type="radio" name="radio" value="MAC">MAC
+                                        <input type="radio" name="radio" value="SN">SN
+                                    </form>
+                                </div>      
+                                <div class="col-md-12 mbt10">
+                                    <form action="">
+                                        <span class="proname">联网方式:</span>
+                                        <input type="radio" name="radio" value="WIFI">WIFI
+                                        <input type="radio" name="radio" value="移动网络">移动网络
+                                        <input type="radio" name="radio" value="蓝牙">蓝牙
+                                        <input type="radio" name="radio" value="局域网">局域网
+                                    </form>
+                                </div>      
+                                <div class="col-md-10 col-md-offset-2">
+                                    <button class="btn btn-info" onclick="basicSubmit()">提交</button>
+                                    <button class="btn btn-danger">取消</button>
+                                </div>
+                            </div> 
+                        </form>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../../statics/pages/common/js/jquery-1.11.3.js"></script>
+    <script src="../../../statics/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../../statics/pages/common/js/common.js"></script>
+    <script src="../../../statics/pages/product/js/basicinfo.js"></script>
+</body>
+</html>
