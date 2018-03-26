@@ -46,16 +46,53 @@
                  </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-4 col-md-offset-5">
+                <ul id="boot-paginator"></ul>
+            </div>
+        </div>
     </div>
 
 
     <script src="../../../statics/pages/common/js/jquery-1.11.3.js"></script>
     <script src="../../../statics/bootstrap/js/bootstrap.min.js"></script>
     <script src="../../../statics/pages/common/js/common.js"></script>`
+    <script src="../../../statics/pages/common/js/bootstrap-paginator.js"></script>
+    <script src="../../../statics/pages/common/js/qunit-1.11.0.js"></script>
     <script>
-        function editPro(){
-            window.location.href="./basicinfo.html";
-        }
+        $(function(){
+            test("Test bootstrap v3 rendering", function(){
+
+            var element = $('#boot-paginator');
+
+            var options = {
+                bootstrapMajorVersion:3,
+                currentPage: 1,
+                numberOfPages: 5,
+                totalPages:20
+            }
+
+            element.bootstrapPaginator(options);
+
+            var element = $('#boot-paginator');
+
+            var list = element.children();
+
+            for(var i=0;i < list.length;i++)
+            {
+                var item = $(list[i]);
+
+                ok(item.is("li"),"Element "+i+" should be li");
+            }
+            $("#boot-paginator").on("click","li",function(){
+                alert(124);
+            })
+        })
+    });
+
+    function editPro(){
+        window.location.href="./basicinfo.html";
+    }
     </script>
 </body>
 </html>
