@@ -61,37 +61,7 @@
     <script src="../../../statics/pages/common/js/bootstrap-paginator.js"></script>
     <script src="../../../statics/pages/common/js/qunit-1.11.0.js"></script>
     <script>
-        /*
-        $(function(){
-            test("Test bootstrap v3 rendering", function(){
 
-            var element = $('#boot-paginator');
-
-            var options = {
-                bootstrapMajorVersion:3,
-                currentPage: 1,
-                numberOfPages: 5,
-                totalPages:20
-            }
-
-            element.bootstrapPaginator(options);
-
-            var element = $('#boot-paginator');
-
-            var list = element.children();
-
-            for(var i=0;i < list.length;i++)
-            {
-                var item = $(list[i]);
-
-                ok(item.is("li"),"Element "+i+" should be li");
-            }
-            $("#boot-paginator").on("click","li",function(){
-                alert(124);
-            })
-        })
-    });
-    */
     $(function(){
     test("", function(){
         var element = $('#boot-paginator');
@@ -117,6 +87,14 @@
             },
             //点击事件
             onPageClicked: function (event, originalEvent, type, page) {
+                var counts = 10;
+                jQuery.ajax({
+                    url:"",
+                    type:"get",
+                    data:{"page":page,"counts":counts},
+                    success:function(){
+                    }
+                })
                 // page为向后台传递的页码
                 // location.href = "/self?event=toUserOperaLog&page=" + page;
             }
