@@ -157,8 +157,8 @@
                     <td>a</td>
                     <td>100</td>
                     <td>
-                        <button type="button" class="btn btn-info">编辑</button>
-                        <button type="button" class="btn btn-danger">删除</button>
+                        <button type="button" onclick="csave(this)" class="btn btn-info">编辑</button>
+                        <button type="button" onclick="ccan(this)" class="btn btn-danger">删除</button>
                     </td>
                 </tr>
             </tbody>
@@ -215,7 +215,6 @@
             }else{
                 validtxt2=true;
             }
-            console.log(validtxt1,validtxt2);
             if((validtxt1&&validtxt2)){
                 // 验证通过
                 $(msg).html("编辑");
@@ -241,12 +240,29 @@
             $(tdtxt[1]).append("<input type='text'value="+tdtxt2+">");
         }
     }
+    // 点击取消按钮
     function ccan(msg){
         var btntxt = $(msg).html();
         if(btntxt=="取消"){
-            $(msg).parents("tr").remove();
+            // $(msg).parents("tr").remove();
+            $(msg).html("删除"); 
+            $(msg).siblings().html("编辑");   
+            var tdtxt = $(msg).parent("td").siblings("td");
+            //获取input框为改变之前的值
+            var inptxt1 = $(tdtxt[0]).children()[0].defaultValue;
+            var inptxt2 = $(tdtxt[1]).children()[0].defaultValue;
+            // 如果有默认值则保存,如果没有默认值说明此记录为新建记录,则删除掉
+            if(inptxt1){
+                // 将td中的文字设置为为改变之前的值
+                $(tdtxt[0]).html(inptxt1);
+                $(tdtxt[1]).html(inptxt2);
+            }else{
+                $(msg).parents("tr").remove();
+            }
+            
         }else if(btntxt == "删除"){
             console.log("删除操作")
+            $(msg).parents("tr").remove();
         }
     }
     // 数据操作编辑按钮
